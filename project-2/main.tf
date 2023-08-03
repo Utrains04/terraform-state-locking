@@ -24,8 +24,8 @@ resource "aws_instance" "ec2_example" {
 
 terraform {
     backend "s3" {
-        bucket = "terraformbackend-bucket1"
-        key    = "terraformbackend-bucket1/remote/s3/terraform.tfstate"
+        bucket = "terraformbackend-buckets"
+        key    = "terraformbackend-buckets/remote/s3/terraform.tfstate"
         region     = "us-east-1"
         dynamodb_table = "dynamodb-state-locking"
     }
